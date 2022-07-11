@@ -19,7 +19,7 @@
 
         <button onclick="history.back()" class='btn btn-primary'>Regresar</button>
 
-        <form name="Cliente" method="POST">
+        <form name="Cliente" method="POST" action="/consultas/borrar_cliente.php">
             <div class="mb-3">
                 <label for="id_cliente" class="form-label">ID</label>
                 <input type="text" class="form-control" id="id_cliente" name="id_cliente" readonly value="<?php echo $cliente['id_cliente']?>">
@@ -32,7 +32,7 @@
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" readonly value="<?php echo $cliente['email']?>">
             </div>
-            <input type="button" class='btn btn-primary' onclick="postProducto()" value="Borrar">
+            <input type="button" class='btn btn-primary' onclick="submit()" value="Borrar">
             <input type="button" class='btn btn-primary' onclick="window.location.replace('/index.php');"
                 value="Cancelar">
         </form>

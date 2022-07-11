@@ -15,7 +15,7 @@
     <div class="container">
         <h1>Insertar Cliente</h1>
 
-        <form name="Cliente" method="POST">
+        <form name="Cliente" method="POST" action="/consultas/insertar_cliente.php">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -24,7 +24,7 @@
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-            <input type="button" class='btn btn-primary' onclick="postProducto()" value="Agregar">
+            <input type="button" class='btn btn-primary' onclick="submit()" value="Agregar">
             <input type="button" class='btn btn-primary' onclick="window.location.replace('/index.php');"
                 value="Cancelar">
         </form>
