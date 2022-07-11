@@ -1,4 +1,4 @@
-<?php require "consultas/todos.php"?>
+<?php require "consultas/todos_clientes.php"?>
 <!DOCTYPE html>
 <html lang="en">
 

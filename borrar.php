@@ -1,4 +1,4 @@
-<?php require "consultas/uno.php"?>
+<?php require "consultas/un_cliente.php"?>
 <!DOCTYPE html>
 <html lang="en">
 
