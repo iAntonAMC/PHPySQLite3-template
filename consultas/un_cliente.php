@@ -8,7 +8,7 @@
         $cliente = $sentencia->fetch();  
         $db = null;
     } catch (PDOException $error) {
-      echo "Error 105: " . $error->getMessage();
+      echo "Error 104: " . $error->getMessage();
     }
 ?>
    

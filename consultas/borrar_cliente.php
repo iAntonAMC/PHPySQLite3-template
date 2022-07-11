@@ -17,6 +17,6 @@
         header("Location: ../index.php");
         exit();
     } catch (PDOException $error) {
-        echo "Error 102: " . $error->getMessage();
+        echo "Error 101: " . $error->getMessage();
     }
 ?>
