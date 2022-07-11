@@ -17,25 +17,30 @@
 <body>
     <div class="container">
         <h1>Lista de Clientes </h1>
+        
          <input type="button" class='btn btn-primary' onclick="window.location.replace('/insertar.php');"
                 value="Insertar">
+        <?php
+            $offset = (int) $_GET['offset'];
+            $siguiente = $offset + 10;
+            $anterior = $offset - 10;
+            echo "<a href='index.php?offset=" . $anterior . "'>Anterior</a>";
+            echo " | ";
+            echo "<a href='index.php?offset=" . $siguiente . "'>Siguiente</a>";
+        ?>
       <table class="table table-striped">
           <thead>
-              <th>Detalle</th>
               <th>Actualizar</th>
               <th>Borrar</th>
-              <th>ID</th>
               <th>Nombre</th>
               <th>Email</th>
           </thead>
           <tbody>
             <?php foreach ($clientes as $cliente) { 
               echo '<tr>';
-                echo "<td><a href='detalle.php/?id_cliente=" . $cliente['id_cliente'] . "'>Detalle</td>";
-                echo "<td><a href='actualizar.php/?id_cliente=" . $cliente['id_cliente'] . "'>Actualizar</td>";
-                echo "<td><a href='borrar.php/?id_cliente=" . $cliente['id_cliente'] . "'>Borrar</td>";
-                echo '<td>' . $cliente['id_cliente'] . '</td>';
-                echo '<td>' . $cliente['nombre'] . '</td>';
+                echo "<td><a href='actualizar.php/?id_cliente=" . $cliente['id_cliente'] . "'>Actualizar</a></td>";
+                echo "<td><a href='borrar.php/?id_cliente=" . $cliente['id_cliente'] . "'>Borrar</a></td>";
+                echo "<td><a href='detalle.php/?id_cliente=" . $cliente['id_cliente'] . "'>" . $cliente['nombre'] . '</a></td>';
                 echo '<td>' . $cliente['email'] . '</td>';
               echo '</tr>';
             } ?>
