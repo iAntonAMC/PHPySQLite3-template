@@ -6,3 +6,4 @@
 - php7.4 PDO extension
 - sqlite3
 
+php -S localhost:8000

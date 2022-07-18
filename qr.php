@@ -13,22 +13,23 @@
 </head>
 
 <body>
-    <h1>Request</h1>
+    <h1>QR Requests</h1>
     <div class="container">
 
-        <form action="mm.php" method="GET">
+        <form action="qr.php" method="POST">
             <input type="text" name="text">
             <input type="submit">
         </form>
     <?php
-        $text=$_GET["text"];
+        $text=$_POST["text"];
         if(isset($text)){
+            $text = urlencode($text);
             $url = 'https://tools4devs.herokuapp.com/qr/?text='.$text;
             $contents = file_get_contents($url);
             if($contents !== false){
                 $result = json_decode($contents);
                 $url = $result->url;
-                echo "<image src='$url'>";
+                echo "<image src='$url' alt='$text'>";
             }
         }
     ?>
