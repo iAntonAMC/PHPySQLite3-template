@@ -10,7 +10,6 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>SQLite3</title>
-    <script type="text/javascript" src="static/js/config.js">
     </script>
 </head>
 
