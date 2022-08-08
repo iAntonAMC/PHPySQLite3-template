@@ -13,6 +13,7 @@
         // $db = new PDO("sqlite:sql/clientes.sqlite");
         
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
     }
     catch (PDOException $error) {
         echo "Error en la conexion: ". $error->getMessage();

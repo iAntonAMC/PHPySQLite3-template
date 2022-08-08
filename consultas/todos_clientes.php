@@ -11,7 +11,9 @@
         
         // $sentencia = $db->prepare("SELECT id_cliente,nombre,email FROM  clientes limit ? offset ?;"); //sqlite
         $sentencia = $db->prepare("SELECT id_cliente,nombre,email FROM  clientes limit ?, ?;"); //mysql
-        $sentencia->execute([$limit, $offset]);
+        $sentencia->bindParam(1, $limit, PDO::PARAM_INT);
+        $sentencia->bindParam(2, $offset, PDO::PARAM_INT);
+        $sentencia->execute();
         $clientes = $sentencia->fetchall();  
         $db = null;
     } catch (PDOException $error) {
