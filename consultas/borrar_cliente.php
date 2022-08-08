@@ -1,7 +1,6 @@
 <?php 
     try {
-        $db = new PDO('sqlite:../sql/clientes.sqlite');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include("conexion.php");
         $id_cliente = $_POST["id_cliente"];
         $nombre = $_POST["nombre"];
         $email = $_POST['email'];

@@ -1,7 +1,6 @@
 <?php 
     try {
-        $db = new PDO('sqlite:../sql/clientes.sqlite');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include("conexion.php");
         $nombre = $_POST["nombre"];
         $email = $_POST['email'];
         $sentencia = $db->prepare("INSERT INTO clientes(nombre,email) VALUES(?,?);");

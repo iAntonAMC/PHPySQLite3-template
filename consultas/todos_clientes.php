@@ -1,7 +1,6 @@
 <?php 
     try {
-        $db = new PDO("sqlite:sql/clientes.sqlite");
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include("conexion.php");
 
         $offset = (int) $_GET["offset"];
         $limit = (int) $_GET["limit"];
