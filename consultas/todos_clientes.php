@@ -9,7 +9,8 @@
             $limit=10;
         }
         
-        $sentencia = $db->prepare("SELECT id_cliente,nombre,email FROM  clientes limit ? offset ?;");
+        // $sentencia = $db->prepare("SELECT id_cliente,nombre,email FROM  clientes limit ? offset ?;"); //sqlite
+        $sentencia = $db->prepare("SELECT id_cliente,nombre,email FROM  clientes limit ?, ?;"); //mysql
         $sentencia->execute([$limit, $offset]);
         $clientes = $sentencia->fetchall();  
         $db = null;
