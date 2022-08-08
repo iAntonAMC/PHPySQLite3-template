@@ -7,3 +7,7 @@
 - sqlite3
 
 php -S localhost:8000
+
+apt install php7.4-cli
+apt install php7.4-mysql
+apt install php7.4-sqlite3
