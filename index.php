@@ -17,6 +17,7 @@
 <body>
     <div class="container">
         <h1>Lista de Clientes <?php echo $database;?></h1>
+        <p>Para cambiar de motor de base de datos usar: ?database=MySQL o ?database=SQLite</p>
         
          <input type="button" class='btn btn-primary' onclick="window.location.replace('/insertar.php');"
                 value="Insertar">

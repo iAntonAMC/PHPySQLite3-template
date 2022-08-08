@@ -7,7 +7,12 @@
         if(isset($database)) {
             $_SESSION["database"] = $database;
         }else{
-            $database = $_SESSION["database"];
+            if(isset($_SESSION["database"])){
+                $database = $_SESSION["database"];
+            }else{
+                $database = "MySQL";
+                $_SESSION["database"] = $database;
+            }
         }
 
         $database = $_SESSION["database"];
