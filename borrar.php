@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require "consultas/un_cliente.php"?>
 <!DOCTYPE html>
 <html lang="en">
