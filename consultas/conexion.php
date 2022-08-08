@@ -1,9 +1,9 @@
 <?php 
     try {
-        $db_host = "cxmgkzhk95kfgbq4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-        $db_username = "q01syfn6oy0g5d4z";
-        $db_password = "zb4u3perwq61gktu";
-        $db_name = "rzqqccli1jp4pp54";
+        $db_host = "x71wqc4m22j8e3ql.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $db_username = "y1vq1dvswxlhzo8q";
+        $db_password = "neo6dzwzew336zfy";
+        $db_name = "ozyctasxrl9vksgn";
         $db_port = "3306";
         $db_charset = "utf8";
         $db_collation = "utf8_unicode_ci";
@@ -13,7 +13,6 @@
         // $db = new PDO("sqlite:sql/clientes.sqlite");
         
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
     }
     catch (PDOException $error) {
         echo "Error en la conexion: ". $error->getMessage();
