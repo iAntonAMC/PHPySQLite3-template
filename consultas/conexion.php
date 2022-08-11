@@ -20,10 +20,10 @@
         $db=null;
 
         if($database=="MySQL"){
-            $db_host = "t07cxyau6qg7o5nz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-            $db_username = "xthomu8s6mv64jqs";
-            $db_password = "uxtixtel1iesadnb";
-            $db_name = "qmyw9tnk0yg5m5wx";
+            $db_host = "localhost";
+            $db_username = "administrador";
+            $db_password = "123456";
+            $db_name = "cllientes";
             $db_port = "3306";
             $db_charset = "utf8";
             $db_collation = "utf8_unicode_ci";
