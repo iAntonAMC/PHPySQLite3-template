@@ -1,17 +1,11 @@
 <?php 
     try {
-        $db = new PDO('sqlite:../sql/clientes.sqlite');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $id_cliente = $_POST["id_cliente"];
-        $nombre = $_POST["nombre"];
-        $email = $_POST['email'];
-        
+        include("conexion.php");
+        $id_cliente = (int) $_POST["id_cliente"];
         //echo "id_cliente " . $id_cliente;
-        //echo "nombre " . $nombre;
-        //echo "email " . $email;
-        
-        $sentencia = $db->prepare("UPDATE clientes set nombre=?, email=? WHERE id_cliente=?");
-        $sentencia->execute([$nombre,$email,$id_cliente]);
+        $sentencia = $db->prepare("DELETE FROM clientes WHERE id_cliente=:id_cliente");
+        $sentencia->bindParam(":id_cliente", $id_cliente, PDO::PARAM_INT);
+        $sentencia->execute();
         $db = null;
         // Redirecciona al index
         header("Location: ../index.php");
